@@ -1,0 +1,20 @@
+<div *ngFor="let profile of profiles">
+  <div>
+    <input type="text" [(ngModel)]="profile.name" placeholder="Name">
+    <input type="text" [(ngModel)]="profile.photoUrl" placeholder="Photo URL">
+    <input type="text" [(ngModel)]="profile.description" placeholder="Description">
+    <input type="text" [(ngModel)]="profile.address" placeholder="Address">
+    <button (click)="editProfile(profile)">Edit</button>
+    <button (click)="deleteProfile(profile.id)">Delete</button>
+  </div>
+</div>
+
+<!-- Add Profile Form -->
+<div>
+  <h3>Add New Profile</h3>
+  <input type="text" [(ngModel)]="newProfile.name" placeholder="Name">
+  <input type="text" [(ngModel)]="newProfile.photoUrl" placeholder="Photo URL">
+  <input type="text" [(ngModel)]="newProfile.description" placeholder="Description">
+  <input type="text" [(ngModel)]="newProfile.address" placeholder="Address">
+  <button (click)="addProfile(newProfile)">Add Profile</button>
+</div>
